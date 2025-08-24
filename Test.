@@ -198,11 +198,18 @@ finderTab:CreateInput({
     Callback = function() end,
 })
 
+finderTab:CreateInput({
+    Name = "Find Pet",
+    PlaceholderText = "Best pet in sever: ...",
+    RemoveTextAfterFocusLost = false,
+    Callback = function() end,
+})
+
 finderTab:CreateButton({
     Name = "Bắt đầu tìm",
     Callback = function()
+        task.wait(3)
         Rayfield:Notify({
-        task.wait(3)    
             Title = "Finder",
             Content = "Đang tìm... Vui lòng đợi",
             Duration = 5,
